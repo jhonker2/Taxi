@@ -43,3 +43,5 @@ Route::get('carreras','CarreraController@index');
 Route::get('choferes','ChoferController@index');
 Route::post('store_chofer','ChoferController@store');
 
+route::get('get_chofer','ChoferController@GET_CHOFERES');
+

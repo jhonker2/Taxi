@@ -18,6 +18,7 @@ $("#btn_registrar").click(function(){
 			success:function(res){
 				if(res.registro=='ok'){
 					alert("Chofer registrados");
+					
 				}
 	        }
     	});

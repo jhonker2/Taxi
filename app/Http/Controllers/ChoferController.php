@@ -48,9 +48,7 @@ class ChoferController extends Controller
             'estado'  => '1',
             ]);
         if($id>0){
-            $id_chofer= DB::table('choferes')->insertGetId([
-                'id_persona'=>$id
-                ]);
+            $id_chofer= DB::table('choferes')->insertGetId(['id_persona'=>$id  ]);
                 if($id_chofer>0){
                     return response()->json(["registro"=>"ok" ]);
                 }else{
@@ -60,6 +58,11 @@ class ChoferController extends Controller
             return response()->json(["registro"=>"error" ]);
         }
 
+    }
+
+    public function GET_CHOFERES(){
+        $chofer=DB::select("select * from personas");
+        return $chofer;
     }
 
     /**
