@@ -117,6 +117,9 @@
                         <a class="nav-link " href="#"><i class="icon-user-following"></i>Clientes</a>
                     </li>
                     <li class="nav-item nav-dropdown">
+                        <a class="nav-link " href="#"><i class="fa fa-user"></i>Choferes</a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
                         <a class="nav-link " href="#"><i class="fa fa-car"></i>Vehiculos</a>
                     </li>
                     <li class="nav-item">
