@@ -40,3 +40,6 @@ Route::get('app', function(){
 
 Route::get('carreras','CarreraController@index');
 
+Route::get('choferes','ChoferController@index');
+Route::post('store_chofer','ChoferController@store');
+
