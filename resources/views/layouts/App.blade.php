@@ -9,7 +9,7 @@
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,AngularJS,Angular,Angular2,Angular 2,Angular4,Angular 4,jQuery,CSS,HTML,RWD,Dashboard,React,React.js,Vue,Vue.js">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>SOCIOS - Admin</title>
+    <title>El-Taxi</title>
 
     <!-- Icons -->
     <link href="{{asset('admin/css/font-awesome.min.css')}}" rel="stylesheet">
@@ -141,7 +141,13 @@
                         <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Configuraciones</a>
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
-                                <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i> Login</a>
+                                <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i>Monitores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i>Choferes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i>Vehiculo</a>
                             </li>
                         </ul>
                     </li>
