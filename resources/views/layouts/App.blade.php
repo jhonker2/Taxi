@@ -16,6 +16,8 @@
     <link href="{{asset('admin/css/simple-line-icons.css')}}" rel="stylesheet">
     <!-- Main styles for this application -->
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{asset('img/taxi.png')}}">
+
     @yield('css')
 
 </head>
@@ -45,7 +47,8 @@
 <body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
     <header class="app-header navbar">
         <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button">☰</button>
-        <a class="navbar-brand" href="#"></a>
+        <!--<a class="navbar-brand" href="#"></a>-->
+        <a href="#"> El Taxi</a>
         <ul class="nav navbar-nav d-md-down-none">
             <li class="nav-item">
                 <a class="nav-link navbar-toggler sidebar-toggler" href="#">☰</a>

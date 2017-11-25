@@ -360,12 +360,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: #20a8d8;
+  color: #171a1b;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #167495;
+    color: #171a1b;
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -7545,7 +7545,7 @@ base-chart.chart {
   height: 55px;
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: #FFEB3B;
   border-bottom: 1px solid #cfd8dc; }
   .app-header.navbar .navbar-brand {
     display: inline-block;
