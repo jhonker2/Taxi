@@ -38,5 +38,5 @@ Route::get('app', function(){
 });
 
 
-Route::get('/carreras','CarreraController@index');
+Route::get('carreras','CarreraController@index');
 

@@ -108,7 +108,7 @@
                         Menu Principal
                     </li>
                     <li class="nav-item nav-dropdown">
-                        <a class="nav-link " href="#"><i class="fa fa-check"></i>Carreras</a>
+                        <a class="nav-link " href="carreras"><i class="fa fa-check"></i>Carreras</a>
                     </li>
                     <li class="nav-item nav-dropdown">
                         <a class="nav-link " href="#"><i class="icon-user-following"></i>Clientes</a>

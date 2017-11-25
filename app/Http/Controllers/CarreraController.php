@@ -13,7 +13,7 @@ class CarreraController extends Controller
      */
     public function index()
     {
-        //
+        return view("Carreras.mapa");
     }
 
     /**
