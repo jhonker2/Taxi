@@ -23,21 +23,21 @@
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label for="name">Placa</label>
-                                                <input type="text" class="form-control" id="nombres" placeholder="Enter your name">
+                                                <input type="text" class="form-control" id="placa" placeholder="Enter your name">
                                             </div>
 
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label for="name">Unidad</label>
-                                                <input type="text" class="form-control" id="apellidos" placeholder="Enter your name">
+                                                <input type="text" class="form-control" id="unidad" placeholder="Enter your name">
                                             </div>
 
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label for="name">Marca</label>
-                                                <input type="text" class="form-control" id="cedula" placeholder="Enter your name">
+                                                <input type="text" class="form-control" id="marca" placeholder="Enter your name">
                                             </div>
 
                                         </div>
@@ -45,7 +45,7 @@
                                     <div class="col-sm-4">
                                         <div class="form-group" style="align-items: center;">
                                             <label>Chofer</label>
-                                            <select class="form-control selcls" style="width:150%" id="list_chofer">
+                                            <select class="form-control selcls" id="list_chofer">
                                                     @foreach($chofer as $c)
                                                    <option value="{{$c->id}}">{{$c->chofer}}</option>
                                                    @endforeach
