@@ -120,7 +120,7 @@
                         <a class="nav-link " href="choferes"><i class="fa fa-user"></i>Choferes</a>
                     </li>
                     <li class="nav-item nav-dropdown">
-                        <a class="nav-link " href="#"><i class="fa fa-car"></i>Vehiculos</a>
+                        <a class="nav-link " href="vehiculos"><i class="fa fa-car"></i>Vehiculos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="widgets.html"><i class="icon-notebook"></i> Reportes<span class="badge badge-info">NEW</span></a>
