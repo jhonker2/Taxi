@@ -47,8 +47,6 @@
                                             <label>Chofer</label>
                                             <select class="form-control selcls" style="width:150%" id="list_chofer">
                                                     <option>Mustard</option>
-                                                    <option>Ketchup</option>
-                                                    <option>Relish</option>
                                             </select>
                                        </div>
                                     </div>
