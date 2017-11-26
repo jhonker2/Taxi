@@ -46,7 +46,9 @@
                                         <div class="form-group" style="align-items: center;">
                                             <label>Chofer</label>
                                             <select class="form-control selcls" style="width:150%" id="list_chofer">
-                                                    <option>Mustard</option>
+                                                    @foreach($chofer as $c)
+                                                   <option value="{{$c->id}}">{{$c->chofer}}</option>
+                                                   @endforeach
                                             </select>
                                        </div>
                                     </div>
