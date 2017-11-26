@@ -38,10 +38,6 @@ public function store(Request $request)
 
     }
 
-    public function GET_VEHICULOS(){
-        $vehiculo=DB::select("select * from vehiculos");
-        return $vehiculo;
-    }
 
 
 }

@@ -46,5 +46,3 @@ route::get('get_chofer','ChoferController@GET_CHOFERES');
 
 Route::get('vehiculos','vehiculocontroller@index');
 Route::get('store_vehiculo','vehiculocontroller@store');
-route::get('get_vehiculo','vehiculocontroller@GET_VEHICULOS');
-
