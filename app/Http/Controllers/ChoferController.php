@@ -20,9 +20,18 @@ class ChoferController extends Controller
 
     public function choferes()
     {   
-        $choferes = DB::select("Select concat(p.nombres,' ',p.apellidos)as chofer, p.telefono, p.cedula, p.estado from personas p, choferes c where p.id=c.id_persona");
+        $choferes = DB::select("Select c.id, concat(p.nombres,' ',p.apellidos)as chofer, p.telefono, p.cedula, p.estado from personas p, choferes c where p.id=c.id_persona and p.estado='1' ");
         
         return view('Chofer.choferes',compact('choferes'));
+    }
+
+    public function delete_chofer($id){
+        $chofer= DB::update('update personas,choferes set estado="0" where choferes.id=? and choferes.id_persona=personas.id',[$id]);
+        if($chofer==1){
+            return response()->json(["RES"=>true]);
+        }else{
+            return response()->json(["RES"=>false]);
+        }
     }
     /**
      * Show the form for creating a new resource.

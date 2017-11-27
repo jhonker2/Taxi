@@ -20,7 +20,7 @@
                 </button>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Actualizar</a>
-                    <a class="dropdown-item" href="#">Eliminar</a> 
+                    <a class="dropdown-item" href="#" onclick="eliminar_chofer({{$d->id}})">Eliminar</a> 
                 </div> 
                 </div> 
             </td> 

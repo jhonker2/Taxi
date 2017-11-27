@@ -51,3 +51,31 @@ function limpiar(){
 	$("#usuario").val("");
 	$("#clave").val("");
 }
+
+function eliminar_chofer(id){
+	swal({
+  		title: 'Esta seguro?',
+  		text: "De eliminar a este Chofer!",
+  		type: 'warning',
+  		showCancelButton: true,
+  		confirmButtonColor: '#3085d6',
+  		cancelButtonColor: '#d33',
+  		confirmButtonText: 'Yes, delete it!'
+	}).then((result) => {
+  		if (result.value) {
+  			$.ajax({
+		 		url:"/delete_chofer/"+id,
+		 		type: 'GET',
+		 		dataType: 'json',
+			success:function(res){
+				if(res.RES){
+					//swal('Ehhh!', 'El chofer se ha registrado!', 'success');
+    				swal('Deleted!', 'Chofer se ha elimnado.', 'success')
+					//limpiar();
+					//$(".gif_registro").hide();
+				}
+	        }
+    	});
+  		}
+	})
+}

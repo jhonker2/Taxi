@@ -19,8 +19,7 @@ class vehiculocontroller extends Controller
 
 
 public function vehiculos(){
-    $vehiculos=DB::select("Select v.id,v.placa,v.unidad,v.marca,concat(p.nombres,' ',p.apellidos) as chofer,v.estado
-                           from vehiculos v inner join (choferes inner join taxi.personas p on choferes.id=p.id)
+    $vehiculos=DB::select("Select v.id,v.placa,v.unidad,v.marca,concat(p.nombres,' ',p.apellidos) as chofer,v.estado from vehiculos v inner join (choferes inner join taxi.personas p on choferes.id=p.id)
                            on v.id=choferes.id");
     return view('vehiculos.vehiculos',compact('vehiculos'));
          
