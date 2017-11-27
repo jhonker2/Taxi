@@ -44,11 +44,7 @@ public function store(Request $request)
     }
 
 
- public function destroy($id)
-    {
-       $vehiculo=User::find($id);
-       dd($vehiculo);
-    }
+ 
 
 
 
