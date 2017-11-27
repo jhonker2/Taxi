@@ -150,7 +150,7 @@
                                 <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i>Monitores</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i>Choferes</a>
+                                <a class="nav-link" href="/get_choferes" target="_top"><i class="icon-star"></i>Choferes</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i>Vehiculo</a>
