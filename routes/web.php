@@ -45,4 +45,4 @@ Route::post('store_chofer','ChoferController@store');
 route::get('get_chofer','ChoferController@GET_CHOFERES');
 
 Route::get('vehiculos','vehiculocontroller@index');
-Route::get('store_vehiculo','vehiculocontroller@store');
+Route::post('store_vehiculo','vehiculocontroller@store');

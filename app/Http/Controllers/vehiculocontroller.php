@@ -24,14 +24,10 @@ public function store(Request $request)
             'unidad' => $request->input('unidad'),
             'marca'  => $request->input('marca'),
             'estado'=>'1',
+            'id_chofer'=>$request->input('choferes')
           ]);
         if($id>0){
-            $id_vehiculo= DB::table('vehiculos')->insertGetId(['id_vehiculo'=>$id ]);
-                if($id_vehiculo>0){
-                    return response()->json(["registro"=>"ok" ]);
-                }else{
-                    return response()->json(["registro"=>"error" ]);
-                }
+            return response()->json(["registro"=>"ok" ]);
         }else{
             return response()->json(["registro"=>"error" ]);
         }

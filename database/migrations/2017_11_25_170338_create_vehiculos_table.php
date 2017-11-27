@@ -19,6 +19,7 @@ class CreateVehiculosTable extends Migration
             $table->string('unidad');
             $table->string('marca');
             $table->string('estado');
+            $table->integer('id_chofer');
             $table->timestamps();
         });
     }

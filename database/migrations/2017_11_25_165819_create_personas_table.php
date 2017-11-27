@@ -18,12 +18,12 @@ class CreatePersonasTable extends Migration
             $table->string('nombres');
             $table->string('apellidos');
             $table->string('telefono');
-            $table->string('foto');
-            $table->string('correo');
-            $table->string('convensional');
+            $table->string('foto')->nullable();
+            $table->string('correo')->nullable();
+            $table->string('convensional')->nullable();
             $table->string('cedula');
-            $table->string('id_dispositivo');
-            $table->string('estado');
+            $table->string('id_dispositivo')->nullable();
+            $table->string('estado')->default("1");
             $table->timestamps();
         });
     }

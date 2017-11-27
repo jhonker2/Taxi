@@ -45,7 +45,6 @@ class ChoferController extends Controller
             'convensional'  => $request->input('convensional'),
             'cedula'  => $request->input('cedula'),
             'id_dispositivo'  => '',
-            'estado'  => '1',
             ]);
         if($id>0){
             $id_chofer= DB::table('choferes')->insertGetId(['id_persona'=>$id  ]);
