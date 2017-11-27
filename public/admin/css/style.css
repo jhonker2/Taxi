@@ -7553,11 +7553,11 @@ base-chart.chart {
     height: 55px;
     padding: 0.5rem 1rem;
     margin-right: 0;
-    background-color: #fff;
-    background-image: url("../img/logo.png");
+    background-color: #FFEB3B;
+    background-image: url("/img/titulo.jpg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 70px auto;
+    background-size: 20em auto;
     border-bottom: 1px solid #cfd8dc; }
   .app-header.navbar .navbar-nav {
     flex-direction: row;
@@ -7647,7 +7647,7 @@ base-chart.chart {
   padding: 0;
   overflow: hidden;
   color: #fff;
-  background: #263238; }
+  background: #171819; }
   .sidebar .sidebar-close {
     position: absolute;
     right: 0;
@@ -7674,7 +7674,7 @@ base-chart.chart {
       margin-left: -10px;
       -webkit-appearance: none; }
     .sidebar .sidebar-nav::-webkit-scrollbar-track {
-      background-color: #304047;
+      background-color: #15191b;
       border-right: 1px solid #1c2429;
       border-left: 1px solid #1c2429; }
     .sidebar .sidebar-nav::-webkit-scrollbar-thumb {
