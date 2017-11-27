@@ -17,6 +17,15 @@ class vehiculocontroller extends Controller
     }
 
 
+
+public function vehiculos(){
+    $vehiculos=DB::select("Select v.id,v.placa,v.unidad,v.marca,concat(p.nombres,' ',p.apellidos) as chofer,v.estado
+                           from vehiculos v inner join (choferes inner join taxi.personas p on choferes.id=p.id)
+                           on v.id=choferes.id");
+    return view('vehiculos.vehiculos',compact('vehiculos'));
+         
+}
+
 public function store(Request $request)
  {
         $id = DB::table('vehiculos')->insertGetId([
@@ -32,6 +41,13 @@ public function store(Request $request)
             return response()->json(["registro"=>"error" ]);
         }
 
+    }
+
+
+ public function destroy($id)
+    {
+       $vehiculo=User::find($id);
+       dd($vehiculo);
     }
 
 

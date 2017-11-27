@@ -43,7 +43,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
-                                        <div class="form-group" style="align-items: center;">
+                                        <div class="form-group" style="margin-left: -14px;">
                                             <label>Chofer</label>
                                             <select class="form-control selcls" id="list_chofer">
                                                     @foreach($chofer as $c)

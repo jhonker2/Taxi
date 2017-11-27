@@ -15,9 +15,41 @@ $("#btn_registrar").click(function(){
 			success:function(res){
 				if(res.registro=='ok'){
 					alert("Chofer registrados");
+					limpiar();
 				}
 	        }
     	});
 
 
 });
+
+
+function limpiar(){
+	$("#placa").val("");
+	$("#unidad").val("");
+	$("#marca").val("");
+	$("#list_chofer").val("");
+}
+
+$("#btn_eliminar").click(function(){
+	var eliminar =$("#eliminar").val();
+
+	$.ajax({
+	        url:"/eliminar_vehiculo",
+	        headers :{'X-CSRF-TOKEN': token},
+	        type: 'POST',
+	        dataType: 'json',
+	        data: {eliminar:eliminar},
+			success:function(res){
+				if(res.registro=='ok'){
+					alert("Chofer registrados");
+					limpiar();
+				}
+	        }
+    	});
+
+
+});
+
+
+

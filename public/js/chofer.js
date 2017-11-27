@@ -16,8 +16,19 @@ $("#btn_registrar").click(function(){
 		$("#nombres").focus();
 
 	}else{
-		$.ajax({url:"/store_chofer", headers :{'X-CSRF-TOKEN': token}, type: 'POST', dataType: 'json',
-	        data: {nombres:nombres,apellidos:apellidos,cedula:cedula,telefono:telefono,convensional:convensional,direccion:direccion,usuario:usuario,clave:clave},
+		$.ajax({
+		 url:"/store_chofer",
+		 headers :{'X-CSRF-TOKEN': token},
+		 type: 'POST',
+		 dataType: 'json',
+	     data: {nombres:nombres,
+	     	    apellidos:apellidos,
+	     	    cedula:cedula,
+	     	    telefono:telefono,
+	     	    convensional:convensional,
+	     	    direccion:direccion,
+	     	    usuario:usuario,
+	     	    clave:clave},
 			success:function(res){
 				if(res.registro=='ok'){
 					swal('Ehhh!', 'El chofer se ha registrado!', 'success');
