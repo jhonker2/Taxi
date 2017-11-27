@@ -54,8 +54,8 @@ function limpiar(){
 
 function eliminar_chofer(id){
 	swal({
-  		title: 'Esta seguro?',
-  		text: "De eliminar a este Chofer!",
+  		title:'Esta seguro?',
+  		text: 'De eliminar a este Chofer!',
   		type: 'warning',
   		showCancelButton: true,
   		confirmButtonColor: '#3085d6',

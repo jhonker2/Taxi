@@ -28,3 +28,7 @@
     @endforeach 
     </tbody>
 </table>
+
+@section('js')
+    <script src="{{asset('js/chofer.js')}}"></script>
+@endsection
