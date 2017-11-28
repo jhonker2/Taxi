@@ -103,6 +103,5 @@
 @endsection
 
 @section('js')
-    <script src="{{asset('js/sweetalert2.min.js')}}"></script>
     <script src="{{asset('js/chofer.js')}}"></script>
 @endsection

@@ -473,6 +473,7 @@
 
     <!-- Custom scripts required by this view -->
     <script src="{{asset('admin/js/views/main.js')}}"></script>
+    <script src="{{asset('js/sweetalert2.min.js')}}"></script>
     @yield('js')        
 </body>
 

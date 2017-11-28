@@ -1,7 +1,7 @@
 @extends('layouts.App')
 
 @section('css')
-
+    <link href="{{asset('css/sweetalert2.min.css')}}" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -17,7 +17,7 @@
                             <a href="#"><i class="fa fa-plus-square-o"></i></a>
                        </div>
                     </div>
-                    <div class="card-block">
+                    <div class="card-block" id="tabla_chofer">
                     	@include('Chofer.tabla')
 					</div>
 				</div>
@@ -25,4 +25,8 @@
 		</div>
 	</div>
 </div>
+@endsection
+
+@section('js')
+    <script src="{{asset('js/chofer.js')}}"></script>
 @endsection

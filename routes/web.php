@@ -44,6 +44,8 @@ Route::get('choferes','ChoferController@index');
 Route::get('get_choferes','ChoferController@choferes');
 Route::post('store_chofer','ChoferController@store');
 Route::get('delete_chofer/{id}','ChoferController@delete_chofer');
+Route::get('activar_chofer/{id}','ChoferController@activar_chofer');
+Route::get('view_tabla','ChoferController@view_tabla');
 
 route::get('get_chofer','ChoferController@GET_CHOFERES');
 

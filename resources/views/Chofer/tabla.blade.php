@@ -10,10 +10,7 @@
             <td>
             @if($d->estado=='1') 
             <span class="badge badge-success">Activo</span>
-            @else
-            <span class="badge badge-warnig">Desactivado</span>
-            @endif
-            </td> 
+             </td> 
             <td><div class="input-group-btn">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Opcion
                 <span class="caret"></span>
@@ -24,6 +21,21 @@
                 </div> 
                 </div> 
             </td> 
+            @else
+            <span class="badge badge-danger">Desactivado</span>
+             </td> 
+            <td><div class="input-group-btn">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Opcion
+                <span class="caret"></span>
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Actualizar</a>
+                    <a class="dropdown-item" href="#" onclick="activar_chofer({{$d->id}})">Activar</a> 
+                </div> 
+                </div> 
+            </td> 
+            @endif
+           
         </tr> 
     @endforeach 
     </tbody>
