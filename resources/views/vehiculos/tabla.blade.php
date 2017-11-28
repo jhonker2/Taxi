@@ -16,23 +16,35 @@
 		<td>{{$v->unidad}}</td>
 		<td>{{$v->marca}}</td>
 		<td>{{$v->chofer}}</td>
-		<td> 
-			@if($v->estado=='1') 
+		@if($v->estado=='1') 
+            <td>
             <span class="badge badge-success">Activo</span>
-            @else
-            <span class="badge badge-warnig">Desactivado</span>
-            @endif
-        </td>
-        <td><div class="input-group-btn">
+             </td> 
+            <td><div class="input-group-btn">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Opcion
                 <span class="caret"></span>
                 </button>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Actualizar</a>
-                    <a class="dropdown-item" href="#" value="{{$v->id}}">Eliminar</a> 
+                    <a class="dropdown-item" href="#" onclick="eliminar_vehiculo({{$v->id}})">Eliminar</a> 
                 </div> 
                 </div> 
             </td> 
+            @else
+            <td>
+            <span class="badge badge-danger">Desactivado</span>
+             </td> 
+            <td><div class="input-group-btn">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Opcion
+                <span class="caret"></span>
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Actualizar</a>
+                    <a class="dropdown-item" href="#" onclick="activar_vehiculo({{$v->id}})">Activar</a> 
+                </div> 
+                </div> 
+            </td> 
+            @endif
 
 	</tr>
 	@endforeach

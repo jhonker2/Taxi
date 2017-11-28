@@ -17,7 +17,7 @@
                             <a href="#"><i class="fa fa-plus-square-o"></i></a>
                        </div>
                     </div>
-                    <div class="card-block">
+                    <div class="card-block" id="tabla_vehiculo">
                     	@include('vehiculos.tabla')
 					</div>
 				</div>

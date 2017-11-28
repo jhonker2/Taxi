@@ -25,6 +25,30 @@ public function vehiculos(){
          
 }
 
+public function view_tabla(){
+    $vehiculos=DB::select("Select v.id,v.placa,v.unidad,v.marca,concat(p.nombres,' ',p.apellidos) as chofer,v.estado from vehiculos v inner join (choferes inner join taxi.personas p on choferes.id=p.id)
+                           on v.id=choferes.id");
+    return view('vehiculos.tabla',compact('vehiculos'));}
+
+
+public function delete_vehiculo($id){
+        $chofer= DB::update('update vehiculos set estado="0" where vehiculos.id=?',[$id]);
+        if($chofer==1){
+            return response()->json(["RES"=>true]);
+        }else{
+            return response()->json(["RES"=>false]);
+        }
+    }
+    public function activar_vehiculo($id){
+        $chofer= DB::update('update vehiculos set estado="1" where vehiculos.id=?',[$id]);
+        if($chofer==1){
+            return response()->json(["RES"=>true]);
+        }else{
+            return response()->json(["RES"=>false]);
+        }
+    }
+
+
 public function store(Request $request)
  {
         $id = DB::table('vehiculos')->insertGetId([
