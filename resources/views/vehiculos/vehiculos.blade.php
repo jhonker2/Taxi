@@ -1,7 +1,7 @@
 @extends('layouts.App')
 
 @section('css')
-
+ <link href="{{asset('css/sweetalert2.min.css')}}" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -25,4 +25,9 @@
 		</div>
 	</div>
 </div>
+@endsection
+
+
+@section('js')
+    <script src="{{asset('js/vehiculo.js')}}"></script>
 @endsection

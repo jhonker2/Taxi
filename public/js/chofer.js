@@ -62,7 +62,6 @@ function eliminar_chofer(id){
   		cancelButtonColor: '#d33',
   		confirmButtonText: 'Yes, delete it!'
 	}).then((result) => {
-  			debugger
   		if (result) {
   			$.ajax({
 		 		url:"/delete_chofer/"+id,

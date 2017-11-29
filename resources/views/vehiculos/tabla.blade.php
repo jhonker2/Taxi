@@ -50,7 +50,3 @@
 	@endforeach
     </tbody>
 </table>
-
-@section('js')
-    <script src="{{asset('js/vehiculo.js')}}"></script>
-@endsection
