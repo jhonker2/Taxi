@@ -58,5 +58,5 @@ Route::get('view_tablav','vehiculocontroller@view_tabla');
 
 
 route::get('clientes','clienteController@index');
-route::get('store_clientes','clienteContrlloer@index');
+route::post('store_clientes','clienteController@store');
 

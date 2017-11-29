@@ -5,7 +5,7 @@ $("#btn_registrar").click(function(){
 	var cedula =$("#cedula").val();
 	var telefono =$("#telefono").val();
 	var convensional =$("#convensional").val();
-	var referecia  =$("#referencia").val();
+	var referencia  =$("#referencia").val();
 	var token =$("#token").val();
 
 	if(nombres=="" && apellidos=="" && cedula=="" && telefono=="" && convensional=="" && referencia=="" ){
@@ -25,7 +25,7 @@ $("#btn_registrar").click(function(){
 	     	    cedula:cedula,
 	     	    telefono:telefono,
 	     	    convensional:convensional,
-	     	    referencia:refeerencia
+	     	    referencia:referencia
 	     	    },
 			success:function(res){
 				if(res.registro=='ok'){
@@ -37,3 +37,12 @@ $("#btn_registrar").click(function(){
     	});
 	}
 });
+
+function limpiar(){
+	$("#nombres").val("");
+	$("#apellidos").val("");
+	$("#cedula").val("");
+	$("#telefono").val("");
+	$("#convensional").val("");
+	$("#referencia").val("");
+}

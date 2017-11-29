@@ -66,7 +66,7 @@
                                     	 <div class="col-sm-4" style="width: 100%;  height:150px ">
                                             <div class="form-group">
                                                 <label for="name">Referencia</label>
-                                                <textarea id="referecia" style="width: 100%;height: 100px"></textarea>
+                                                <textarea id="referencia" style="width: 100%;height: 100px"></textarea>
                                             </div>
 
                                         </div>

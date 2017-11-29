@@ -65,7 +65,7 @@ class ChoferController extends Controller
      */
     public function store(Request $request)
     {
-        $id = DB::table('')->insertGetId([
+        $id = DB::table('personas')->insertGetId([
             'nombres'   => $request->input('nombres'), 
             'apellidos' => $request->input('apellidos'),
             'telefono'  => $request->input('telefono'),
@@ -74,10 +74,10 @@ class ChoferController extends Controller
             'convensional'  =>$request->input('convensional'),
             'cedula'  => $request->input('cedula'),
             'id_dispositivo'  => '',
+            'estado'=>'1'
             ]);
         if($id>0){
-            $id_cliente= DB::table('clientes')->insertGetId(['id_persona'=>$id,
-            'referencia'=>$request->input('referencia')  ]);
+            $id_chofer= DB::table('choferes')->insertGetId(['id_persona'=>$id ]);
                 if($id_chofer>0){
                     return response()->json(["registro"=>"ok" ]);
                 }else{

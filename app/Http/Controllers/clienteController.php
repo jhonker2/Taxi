@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use DB;
+
 class clienteController extends Controller
 {
     /**
@@ -41,13 +43,17 @@ class clienteController extends Controller
             'telefono'  => $request->input('telefono'),
             'foto'  => 'sinfoto',
             'correo'  => 'sin correo',
-            'convensional'  => $request->input('convensional'),
+            'convensional'  =>$request->input('convensional'),
             'cedula'  => $request->input('cedula'),
             'id_dispositivo'  => '',
+            'estado'=>'1'
             ]);
         if($id>0){
-            $id_chofer= DB::table('choferes')->insertGetId(['id_persona'=>$id  ]);
-                if($id_chofer>0){
+            $id_cliente= DB::table('clientes')->insertGetId([
+                'id_persona'=>$id,
+                'referencia'  => $request->input('referencia')
+                 ]);
+                if($id_cliente>0){
                     return response()->json(["registro"=>"ok" ]);
                 }else{
                     return response()->json(["registro"=>"error" ]);
@@ -55,6 +61,7 @@ class clienteController extends Controller
         }else{
             return response()->json(["registro"=>"error" ]);
         }
+
     }
 
     /**
