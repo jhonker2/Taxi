@@ -60,3 +60,8 @@ Route::get('view_tablav','vehiculocontroller@view_tabla');
 route::get('clientes','clienteController@index');
 route::post('store_clientes','clienteController@store');
 
+
+
+/*RUTAS WEBSERVICE*/
+
+route::post('locaclizacion','LocalizacionController@localizacion');

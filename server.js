@@ -62,11 +62,11 @@ var pollingLoop = function() {
   //" dispo_movimitos dm, dispositivos d, usuarios u, dispositivo_usuarios du where d.id = dm.id_dispositivo and u.id = du.usuario_id and du.estado='online' and d.id = du.dispositivo_id"
   if(cedula==""){
     //var query = connection.query('select d.id_movil, du.estado, dm.latitud, dm.longitud,dm.hora, u.nombre, d.numero from dispo_movimitos dm, dispositivos d, usuario_systems u, dispositivo_usuarios du where d.id = dm.id_dispositivo and u.cedula = du.usuario_id and u.col !="LECTOR" and du.estado="online" and d.id = du.dispositivo_id and dm.fecha ="'+f+'" and dm.hora = (select max(dmm.hora) from dispo_movimitos dmm where dmm.id_dispositivo=d.id and dmm.fecha="'+f+'")'),
-    var query = connection.query('select * from choferes, personas where personas.id=choferes.id_persona'),
+    var query = connection.query('select * from localizaciones'),
     cata = []; // this array will contain the result of our db query
   }else{
     //var query = connection.query('select d.id_movil, du.estado, dm.latitud, dm.longitud,dm.hora, u.nombre, d.numero from dispo_movimitos dm, dispositivos d, usuario_systems u, dispositivo_usuarios du where d.id = dm.id_dispositivo and u.cedula = du.usuario_id and u.col !="LECTOR" and du.estado="online" and d.id = du.dispositivo_id and dm.fecha ="'+f+'" and  id_dispositivo = (SELECT dispositivo_id FROM dispositivo_usuarios d where usuario_id="'+cedula+'" and estado ="online")'),
-    var query = connection.query('SELECT * FROM choferes where cedula= "'+cedula+'"'),
+    var query = connection.query('SELECT * FROM localizaciones where cedula= "'+cedula+'"'),
 
     cata = []; // this array will contain the result of our db query
   }
