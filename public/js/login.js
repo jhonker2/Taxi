@@ -23,7 +23,7 @@ $(document).ready(function(){
          //loader_login('off');        
       }else{
           ////loader_login('on');
-        $.ajax({url:'logeo', type:'POST', headers :{'X-CSRF-TOKEN': token}, dataType:'json',
+        $.ajax({url:'/logeo', type:'POST', headers :{'X-CSRF-TOKEN': token}, dataType:'json',
             data:{usuario:usuario,clave:clave},
             success:function(response){ 
                 //loader_login('off');

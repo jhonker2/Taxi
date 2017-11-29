@@ -18,9 +18,9 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
 	//Route::get('app','AppController@index');
 	
-	Route::post('/logeo',array('as'=>'login', 'uses'=>'LoginController@login'));
+	Route::post('logeo','LoginController@login');
 	
-	Route::get('/logout','LoginController@logout');
+	Route::get('logout','LoginController@logout');
 	
 	Route::get('/', function () {
 		if (Auth::guest()){
