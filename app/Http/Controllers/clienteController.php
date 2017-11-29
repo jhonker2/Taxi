@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use DB;
-
-class ChoferController extends Controller
+class clienteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,38 +13,10 @@ class ChoferController extends Controller
      */
     public function index()
     {
-        return view('Chofer.formulario');
+        //
+        return view('clientes.formulario');
     }
 
-    public function choferes()
-    {   
-        $choferes = DB::select("Select c.id, concat(p.nombres,' ',p.apellidos)as chofer, p.telefono, p.cedula, p.estado from personas p, choferes c where p.id=c.id_persona");
-        
-        return view('Chofer.choferes',compact('choferes'));
-    }
-
-    public function view_tabla(){
-        $choferes = DB::select("Select c.id, concat(p.nombres,' ',p.apellidos)as chofer, p.telefono, p.cedula, p.estado from personas p, choferes c where p.id=c.id_persona");
-        
-        return view('Chofer.tabla',compact('choferes'));
-    }
-
-    public function delete_chofer($id){
-        $chofer= DB::update('update personas,choferes set estado="0" where choferes.id=? and choferes.id_persona=personas.id',[$id]);
-        if($chofer==1){
-            return response()->json(["RES"=>true]);
-        }else{
-            return response()->json(["RES"=>false]);
-        }
-    }
-    public function activar_chofer($id){
-        $chofer= DB::update('update personas,choferes set estado="1" where choferes.id=? and choferes.id_persona=personas.id',[$id]);
-        if($chofer==1){
-            return response()->json(["RES"=>true]);
-        }else{
-            return response()->json(["RES"=>false]);
-        }
-    }
     /**
      * Show the form for creating a new resource.
      *
@@ -65,19 +35,18 @@ class ChoferController extends Controller
      */
     public function store(Request $request)
     {
-        $id = DB::table('')->insertGetId([
+         $id = DB::table('personas')->insertGetId([
             'nombres'   => $request->input('nombres'), 
             'apellidos' => $request->input('apellidos'),
             'telefono'  => $request->input('telefono'),
             'foto'  => 'sinfoto',
             'correo'  => 'sin correo',
-            'convensional'  =>$request->input('convensional'),
+            'convensional'  => $request->input('convensional'),
             'cedula'  => $request->input('cedula'),
             'id_dispositivo'  => '',
             ]);
         if($id>0){
-            $id_cliente= DB::table('clientes')->insertGetId(['id_persona'=>$id,
-            'referencia'=>$request->input('referencia')  ]);
+            $id_chofer= DB::table('choferes')->insertGetId(['id_persona'=>$id  ]);
                 if($id_chofer>0){
                     return response()->json(["registro"=>"ok" ]);
                 }else{
@@ -86,12 +55,6 @@ class ChoferController extends Controller
         }else{
             return response()->json(["registro"=>"error" ]);
         }
-
-    }
-
-    public function GET_CHOFERES(){
-        $chofer=DB::select("select * from personas");
-        return $chofer;
     }
 
     /**

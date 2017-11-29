@@ -56,3 +56,7 @@ Route::get('delete_vehiculo/{id}','vehiculocontroller@delete_vehiculo');
 Route::get('activar_vehiculo/{id}','vehiculocontroller@activar_vehiculo');
 Route::get('view_tablav','vehiculocontroller@view_tabla');
 
+
+route::get('clientes','clienteController@index');
+route::get('store_clientes','clienteContrlloer@index');
+

@@ -114,7 +114,7 @@
                         <a class="nav-link " href="carreras"><i class="fa fa-check"></i>Carreras</a>
                     </li>
                     <li class="nav-item nav-dropdown">
-                        <a class="nav-link " href="#"><i class="icon-user-following"></i>Clientes</a>
+                        <a class="nav-link " href="clientes"><i class="icon-user-following"></i>Clientes</a>
                     </li>
                     <li class="nav-item nav-dropdown">
                         <a class="nav-link " href="choferes"><i class="fa fa-user"></i>Choferes</a>
