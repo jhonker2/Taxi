@@ -60,6 +60,9 @@ Route::get('view_tablav','vehiculocontroller@view_tabla');
 route::get('clientes','clienteController@index');
 route::post('store_clientes','clienteController@store');
 
+route::get('monitores','monitoresController@index');
+route::post('store_monitor','monitoresController@store');
+
 
 
 /*RUTAS WEBSERVICE*/
