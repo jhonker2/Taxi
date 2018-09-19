@@ -1,7 +1,7 @@
 @extends('personal.personal')
 @section('content-personal')
 <input  type="hidden" name="_token" value="{{csrf_token()}}" id="token">
-	<br>
+
 	<div class="container-fluid">
                 <div class="animated fadeIn">
                     <div class="row">
