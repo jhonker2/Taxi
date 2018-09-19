@@ -36,24 +36,18 @@ class monitoresController extends Controller
     public function store(Request $request)
     {
         //
-        $id= DB::table('personas')->insertGetId([
+       $id = DB::table('personas')->insertGetId([
             'nombres'   => $request->input('nombres'), 
             'apellidos' => $request->input('apellidos'),
-          
-        ]); 
-        if ($id>0) {
-            # code...
-            $id_monitor= DB::table('monitores')->insertGetId(['id_persona'=>$id]);
-            if ($id_monitor>0) {
-                # code...
-                echo responde()->json(["registro"=>"ok"]);
-
-            }else{
-                echo response()->json(["registro"=>"error"]);
-            }
-        }else{
-            echo response()->json(["resgitro"=>"error"]);
-        }
+            'telefono'  => $request->input('telefono'),
+            'foto'  => 'sinfoto',
+            'correo'  => 'sin correo',
+            'convensional'  =>$request->input('convensional'),
+            'cedula'  => $request->input('cedula'),
+            'id_dispositivo'  => '',
+            'estado'=>'1'
+            ]);
+        return response()->json($id);
     }
 
     /**

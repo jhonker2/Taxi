@@ -27,21 +27,21 @@
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label for="name">Nombres</label>
-                                                <input type="text" class="form-control" id="nombresMonitor" placeholder="Ingrese los nombres">
+                                                <input type="text" class="form-control" id="nombres" placeholder="Ingrese los nombres">
                                             </div>
 
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label for="name">Apellidos</label>
-                                                <input type="text" class="form-control" id="apellidosMonitor" placeholder="Ingrese los apellidos">
+                                                <input type="text" class="form-control" id="apellidos" placeholder="Ingrese los apellidos">
                                             </div>
 
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label for="name">Cedula</label>
-                                                <input type="text" class="form-control" id="cedulaMonitor" placeholder="Ingrese el numero de Cédula">
+                                                <input type="text" class="form-control" id="cedula" placeholder="Ingrese el numero de Cédula">
                                             </div>
 
                                         </div>
@@ -50,21 +50,21 @@
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label for="name">Telefono</label>
-                                                <input type="text" class="form-control" id="telefonoMonitor" placeholder="Ingrese el numero celular">
+                                                <input type="text" class="form-control" id="telefono" placeholder="Ingrese el numero celular">
                                             </div>
 
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label for="name">Convensional</label>
-                                                <input type="text" class="form-control" id="convensionalMonitor" placeholder="Ingrese el numero convensional">
+                                                <input type="text" class="form-control" id="convensional" placeholder="Ingrese el numero convensional">
                                             </div>
 
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label for="name">Direccion</label>
-                                                <input type="text" class="form-control" id="direccionMonitor" placeholder="Ingrese la direccion(opcional)">
+                                                <input type="text" class="form-control" id="direccion" placeholder="Ingrese la direccion(opcional)">
                                             </div>
 
                                         </div>
@@ -73,14 +73,14 @@
                                     	 <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label for="name">Usuario</label>
-                                                <input type="text" class="form-control" id="usuarioMonitor" placeholder="Ingrese nombre de usuario">
+                                                <input type="text" class="form-control" id="usuario" placeholder="Ingrese nombre de usuario">
                                             </div>
 
                                         </div>
                                          <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label for="name">Clave</label>
-                                                <input type="password" class="form-control" id="claveMonitor" placeholder="Ingrese una clave de acceso">
+                                                <input type="password" class="form-control" id="clave" placeholder="Ingrese una clave de acceso">
                                             </div>
 
                                         </div>
@@ -90,7 +90,7 @@
                                     </div>
 									<div class="row">
                                          <div class="col-sm-4">
-											<button type="button" id="btn_registrarMonitor" class="btn btn_taxi">Registrar Monitor</button>
+											<button type="button" id="btn_registrar" class="btn btn_taxi">Registrar Chofer</button>
 										</div>
 									</div>
                                 </div>
