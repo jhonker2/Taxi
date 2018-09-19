@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class monitoresController extends Controller
 {
@@ -45,10 +46,31 @@ class monitoresController extends Controller
             'convensional'  =>$request->input('convensional'),
             'cedula'  => $request->input('cedula'),
             'id_dispositivo'  => '',
-            'estado'=>'1'
+            'estado'=>'1',
             ]);
-        return response()->json($id);
-    }
+       $id_users = DB::table('users')->insertGetId([
+                    'usuario'   => $request->input('usuario'), 
+                    'password' => $request->input('clave'),
+                    'tipo'  => '1',
+                    ]);
+        if ($id>0 and $id_users>0) 
+        {
+            # code...
+            $id_monitor=DB::table('monitores')->insertGetId(['id_persona'=>$id,
+                                                             'id_users'=>$id_users]);
+            if ($id_monitor>0) {
+                # code...
+                 return response()->json(["registro"=>"ok"]);
+            }
+
+            
+        }else
+        {
+            return response()->json(["registro"=>"error"]);
+        }
+                     
+           
+   }
 
     /**
      * Display the specified resource.

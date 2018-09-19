@@ -27,7 +27,7 @@ $(document).ready(function(){
             data:{usuario:usuario,clave:clave},
             success:function(response){ 
                 //loader_login('off');
-                   if(response.sms=="login"){
+                 if(response.sms=="login"){
                  ////loader_login('off');
                   alert("Bienvenido");
                   redirect('/app');

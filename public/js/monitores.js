@@ -17,7 +17,7 @@ $("#btn_registrar").click(function(){
 
 	}else{
 		$.ajax({
-		 url:"store_monitor",
+		 url:"/store_monitor",
 		 headers :{'X-CSRF-TOKEN': token},
 		 type: 'POST',
 		 dataType: 'json',
@@ -31,7 +31,7 @@ $("#btn_registrar").click(function(){
 	     	    clave:clave},
 			success:function(res){
 				if(res.registro=='ok'){
-					swal('Ehhh!', 'El chofer se ha registrado!', 'success');
+					swal('Ehhh!', 'El monitor se ha registrado!', 'success');
 					limpiar();
 					$(".gif_registro").hide();
 				}

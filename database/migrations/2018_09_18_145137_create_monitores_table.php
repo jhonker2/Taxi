@@ -16,6 +16,7 @@ class CreateMonitoresTable extends Migration
         Schema::create('monitores', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_persona');
+            $table->integer('id_users');
             $table->timestamps();
         });
     }

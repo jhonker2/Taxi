@@ -90,7 +90,7 @@
                                     </div>
 									<div class="row">
                                          <div class="col-sm-4">
-											<button type="button" id="btn_registrar" class="btn btn_taxi">Registrar Chofer</button>
+											<button type="button" id="btn_registrar" class="btn btn_taxi">Registrar Monitor</button>
 										</div>
 									</div>
                                 </div>
