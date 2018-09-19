@@ -120,12 +120,6 @@
                         <a class="nav-link " href="personal"><i class="fa fa-car"></i>Personal</a>
                     </li>
                     <li class="nav-item nav-dropdown">
-                        <a class="nav-link " href="#"><i class="fa fa-user"></i>Monitores</a>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a class="nav-link " href="choferes"><i class="fa fa-user"></i>Choferes</a>
-                    </li>
-                    <li class="nav-item nav-dropdown">
                         <a class="nav-link " href="vehiculos"><i class="fa fa-car"></i>Vehiculos</a>
                     </li>
                     <li class="nav-item">
