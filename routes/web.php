@@ -41,7 +41,7 @@ Route::get('app', function(){
 Route::get('carreras','CarreraController@index');
 
 Route::get('choferes','ChoferController@index');
-Route::get('get_choferes','ChoferController@choferes');
+//Route::get('get_choferes','ChoferController@choferes');
 Route::post('store_chofer','ChoferController@store');
 Route::get('delete_chofer/{id}','ChoferController@delete_chofer');
 Route::get('activar_chofer/{id}','ChoferController@activar_chofer');
@@ -62,6 +62,8 @@ route::post('store_clientes','clienteController@store');
 
 route::get('monitores','monitoresController@index');
 route::post('store_monitor','monitoresController@store');
+
+route::get('personal','personalController@index');
 
 
 

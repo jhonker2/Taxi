@@ -48,7 +48,7 @@
     <header class="app-header navbar">
         <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button">☰</button>
         <!--<a class="navbar-brand" href="#"></a>-->
-        <a href="#" class="navbar-brand"></a>
+        <a href="#" class=""></a>
         <ul class="nav navbar-nav d-md-down-none">
             <li class="nav-item">
                 <a class="nav-link navbar-toggler sidebar-toggler" href="#">☰</a>
@@ -117,7 +117,10 @@
                         <a class="nav-link " href="clientes"><i class="icon-user-following"></i>Clientes</a>
                     </li>
                     <li class="nav-item nav-dropdown">
-                        <a class="nav-link " href="monitores"><i class="fa fa-user"></i>Monitores</a>
+                        <a class="nav-link " href="personal"><i class="fa fa-car"></i>Personal</a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link " href="#"><i class="fa fa-user"></i>Monitores</a>
                     </li>
                     <li class="nav-item nav-dropdown">
                         <a class="nav-link " href="choferes"><i class="fa fa-user"></i>Choferes</a>

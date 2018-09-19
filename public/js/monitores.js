@@ -32,7 +32,6 @@ $("#btn_registrar").click(function(){
 			success:function(res){
 				if(res.registro=='ok'){
 					swal('Ehhh!', 'El monitor se ha registrado!', 'success');
-					limpiar();
 					$(".gif_registro").hide();
 				}
 	        }

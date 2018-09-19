@@ -15,7 +15,7 @@ class ChoferController extends Controller
      */
     public function index()
     {
-        return view('Chofer.formulario');
+        return view('personal.choferes.formulario');
     }
 
     public function choferes()
