@@ -68,10 +68,10 @@
 <script>
     
     $("#op3").click(function(){
-        
-        $("#personal").append("<div id='vehiculochofer'></div>")
+        $("#personal").html("");
+        $("#personal").append("<div id='vehiculochofer'></div>");
         $("#vehiculochofer").load('/vehiculos_formulario');
-        ("#personal").load('/view_tablav');
+
 
     })
 </script>
