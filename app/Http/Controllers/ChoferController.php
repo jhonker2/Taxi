@@ -15,7 +15,7 @@ class ChoferController extends Controller
      */
     public function index()
     {
-        return view('personal.choferes.formulario');
+        return view('personal.Chofer.formulario');
     }
 
     public function choferes()
@@ -79,7 +79,8 @@ class ChoferController extends Controller
         if($id>0){
             $id_chofer= DB::table('choferes')->insertGetId(['id_persona'=>$id ]);
                 if($id_chofer>0){
-                    return response()->json(["registro"=>"ok" ]);
+                    return response()->json(["registro"=>"ok"]);
+
                 }else{
                     return response()->json(["registro"=>"error" ]);
                 }
@@ -91,8 +92,10 @@ class ChoferController extends Controller
 
     public function GET_CHOFERES(){
         $chofer=DB::select("select * from personas");
-        return $chofer;
+        return $chofer ;
     }
+
+ 
 
     /**
      * Display the specified resource.

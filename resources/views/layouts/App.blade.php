@@ -51,7 +51,8 @@
         <a href="#" class=""></a>
         <ul class="nav navbar-nav d-md-down-none">
             <li class="nav-item">
-                <a class="nav-link navbar-toggler sidebar-toggler" href="#">☰</a>
+                <a class="nav-link navbar-toggler sidebar-toggler " href="#">☰</a>
+               
             </li>
 
             <!--<li class="nav-item px-3">
@@ -163,6 +164,8 @@
         </div>
 
         <!-- Main content -->
+
+
         <main class="main">
             @yield('content')          
         </main>

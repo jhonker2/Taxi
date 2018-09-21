@@ -1,10 +1,4 @@
-@extends('layouts.App')
 
-@section('css')
-
-@endsection
-
-@section('content')
 <input  type="hidden" name="_token" value="{{csrf_token()}}" id="token">
 	<br>
 	<div class="container-fluid">
@@ -64,7 +58,6 @@
                     </div>
 		</div>
     </div>
-@endsection
 
 @section('js')
     <script src="{{asset('js/vehiculo.js')}}"></script>

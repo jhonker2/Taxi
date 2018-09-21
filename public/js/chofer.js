@@ -1,5 +1,5 @@
 $("#btn_registrar").click(function(){
-	$(".gif_registro").show();
+
 	var nombres =$("#nombres").val();
 	var apellidos =$("#apellidos").val();
 	var cedula =$("#cedula").val();
@@ -31,13 +31,13 @@ $("#btn_registrar").click(function(){
 	     	    clave:clave},
 			success:function(res){
 				if(res.registro=='ok'){
-					swal('Ehhh!', 'El chofer se ha registrado!', 'success');
-					limpiar();
-					$(".gif_registro").hide();
+                    $("#personal").append("<div id='vehiculochofer'></div>")
+    				$("#vehiculochofer").load('/vehiculos_formulario');
+				
+				  }
 				}
-	        }
-    	});
-	}
+			});
+		}
 });
 
 
@@ -112,3 +112,6 @@ function activar_chofer(id){
   		}
 	})
 }
+
+
+

@@ -40,7 +40,7 @@ Route::get('app', function(){
 
 Route::get('carreras','CarreraController@index');
 
-Route::get('choferes','ChoferController@index');
+Route::get('chofer_formulario','ChoferController@index');
 //Route::get('get_choferes','ChoferController@choferes');
 Route::post('store_chofer','ChoferController@store');
 Route::get('delete_chofer/{id}','ChoferController@delete_chofer');
@@ -48,8 +48,9 @@ Route::get('activar_chofer/{id}','ChoferController@activar_chofer');
 Route::get('view_tabla','ChoferController@view_tabla');
 
 route::get('get_chofer','ChoferController@GET_CHOFERES');
+route::get('get_choferA','ChoferController@GETCHOFERES');
 
-Route::get('vehiculos','vehiculocontroller@index');
+Route::get('vehiculos_formulario','vehiculocontroller@index');
 route::get('get_vehiculos','vehiculocontroller@vehiculos');
 Route::post('store_vehiculo','vehiculocontroller@store');
 Route::get('delete_vehiculo/{id}','vehiculocontroller@delete_vehiculo');

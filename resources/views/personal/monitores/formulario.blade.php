@@ -1,7 +1,7 @@
 @extends('personal.personal')
 @section('content-personal')
 <input  type="hidden" name="_token" value="{{csrf_token()}}" id="token">
-    <br>
+<br>
     <div class="container-fluid">
                 <div class="animated fadeIn">
                     <div class="row">
@@ -95,4 +95,7 @@
                     </div>
         </div>
     </div>
+@endsection
+@section('js')
+    <script src="{{asset('js/monitores.js')}}"></script>
 @endsection
