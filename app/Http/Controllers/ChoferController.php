@@ -18,6 +18,11 @@ class ChoferController extends Controller
         return view('personal.Chofer.formulario');
     }
 
+     public function menu()
+    {
+        return view('personal.Chofer.submenu');
+    }
+
     public function choferes()
     {   
         $choferes = DB::select("Select c.id, concat(p.nombres,' ',p.apellidos)as chofer, p.telefono, p.cedula, p.estado from personas p, choferes c where p.id=c.id_persona");

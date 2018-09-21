@@ -5,11 +5,12 @@
     <link href="{{asset('css/sweetalert2.min.css')}}" rel="stylesheet">
     <style>
     	.personal-menu li{
-    		float: right;
+    		float: left;
             list-style: none;
             background: #171819;;
             padding: 15px;
             border-left:1px solid white;
+            border-right:1px solid white;
             color: white;
 
 
@@ -19,7 +20,19 @@
             background: #f8e85b;
             color:black;
 
-     
+        }
+
+        .personal-submenu li{
+            float: right;
+            list-style: none;
+            padding: 5px;
+            color: black;
+            
+        }
+        .personal-submenu li:hover{
+            background: #f8e85b;
+            color:black;
+
         }
        
     	
@@ -30,17 +43,17 @@
 
 @section('content')
 
-<div class="container-fluid app-header " style="width: 85%;height: 74px;padding-top: 12px;background: #eceff1;padding-bottom: 0px;">
+<div class="container-fluid app-header " style="width: 87%;height: 74px;padding-top: 12px;background: #eceff1;padding-bottom: 0px;">
     <div class="animated fadeIn">
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="header" style="background: #171819;border:1px solid yellow;">
-                         <ul class="personal-menu">
-                            <li id="op1">Monitores</li>
-                            <li id="op3">Vehiculos</li>
+                         <ul class="personal-menu" style="margin-left: -40px;">
                             <li id="op2">Choferes</li>
-
+                            <li id="op3">Vehiculos</li>
+                            <li id="op1">Monitores</li>
+                            
                          </ul>
                     </div>
                    
@@ -50,9 +63,10 @@
     </div>
 </div>
 <br><br><br>
-<div id="personal">
+<div id="submenu">
     
 </div>
+
 
 @endsection
 
@@ -61,20 +75,17 @@
 <script>
     
     $("#op2").click(function(){
-        $("#personal").load('/chofer_formulario');
+        $("#submenu").load('/chofer_menu');
     })
-</script>
 
-<script>
-    
+
     $("#op3").click(function(){
-        $("#personal").html("");
-        $("#personal").append("<div id='vehiculochofer'></div>");
-        $("#vehiculochofer").load('/vehiculos_formulario');
-
-
+        $("#submenu").html("");
+        $("#submenu").load('/vehiculo_menu');
     })
 </script>
+
+
 
     
 @endsection

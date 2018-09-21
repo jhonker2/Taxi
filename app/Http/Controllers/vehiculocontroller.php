@@ -16,6 +16,11 @@ class vehiculocontroller extends Controller
         return view('personal.vehiculos.formulario',compact('chofer'));
     }
 
+    public function menu()
+    {
+        return view('personal.vehiculos.submenu');
+    }
+
 
 
 public function vehiculos(){
