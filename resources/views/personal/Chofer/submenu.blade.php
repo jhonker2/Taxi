@@ -28,5 +28,11 @@
         $("#vehiculochofer").load('/vehiculos_formulario');
 
 
+    });
+    $("#lista_chofer").click(function(){
+        $("#personal").html("");
+        $("#personal").load('/ver_tabla');
+     
+
     })
 </script>

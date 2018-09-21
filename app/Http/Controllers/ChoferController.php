@@ -33,7 +33,7 @@ class ChoferController extends Controller
     public function view_tabla(){
         $choferes = DB::select("Select c.id, concat(p.nombres,' ',p.apellidos)as chofer, p.telefono, p.cedula, p.estado from personas p, choferes c where p.id=c.id_persona");
         
-        return view('Chofer.tabla',compact('choferes'));
+        return view('personal.Chofer.tabla',compact('choferes'));
     }
 
     public function delete_chofer($id){
